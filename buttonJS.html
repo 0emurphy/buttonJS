@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <button onclick="">The Family Blood Line</button>
+            <button onclick="gaussianDiagram()">The Family Blood Line</button>
         </section>
 
         <section id="bb4" class="bigbox">
@@ -82,11 +82,20 @@
              let section2 = doc.querySelector('#bb2');
              let subtitle2 = doc.querySelector('#bb2 > h3');
              let para2 = doc.querySelector('#bb2 > div > p');
-             section2.classList.add('night')
              section2.classList.toggle('night');
+             subtitle2.classList.toggle('night');
+             para2.classList.toggle('night');
        }
 
-        //function 3
+        function gaussianDiagram(){
+            const doc = document;
+            let gp = doc.querySelector('.gp');
+            let p = doc.querySelector('.p');
+            let c = doc.querySelectorAll('.c');
+            gp.style.backgroundColor = "#550000";
+            p.style.backgroundColor = "#991100";
+            c.style.backgroundColor = "#dd1111";
+        }
 
         //function 4
 
