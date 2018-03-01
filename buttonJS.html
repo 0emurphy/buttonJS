@@ -52,7 +52,7 @@
                     <li class="fish">blue fish</li>
                 </ul>
             </div>
-            <button onclick="">Technicolor Fish</button>
+            <button onclick="seuss()">Technicolor Fish</button>
         </section>
 
         <section id="bb5" class="bigbox">
@@ -61,7 +61,7 @@
                 <span>20</span>
             </div>
             <br>
-            <button onclick="">+1</button>
+            <button onclick="add1()">+1</button>
             <button onclick="">+10</button>
         </section>
     </body>
@@ -94,11 +94,21 @@
             let c = doc.querySelectorAll('.c');
             gp.style.backgroundColor = "#550000";
             p.style.backgroundColor = "#991100";
-            c.style.backgroundColor = "#dd1111";
+            c[0].style.backgroundColor = "#dd1111";
+            c[1].style.backgroundColor = "#dd1111";
         }
 
-        //function 4
+       function seuss(){
+            const doc = document;
+            let fish = doc.querySelectorAll('.fish');
+            fish[2].style.color = "red";
+            fish[3].style.color = "blue";
+       }
 
-        //function 5 & 6
+        function add1(){
+            const doc = document;
+            let span = doc.getElementsByTagName('span');
+            span.innerHTML = span.innerHTML + 1;
+       }
     </script>
 </html>
