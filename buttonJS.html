@@ -62,7 +62,7 @@
             </div>
             <br>
             <button onclick="add1()">+1</button>
-            <button onclick="">+10</button>
+            <button onclick="add10()">+10</button>
         </section>
     </body>
     <script type="text/javascript">
@@ -108,7 +108,16 @@
         function add1(){
             const doc = document;
             let span = doc.getElementsByTagName('span');
-            span.innerHTML = span.innerHTML + 1;
+            let value = Number(doc.querySelector('span').innerHTML);
+            value++;
+            doc.querySelector('span').innerHTML = value;
        }
+       function add10(){
+           const doc = document;
+           let span = doc.getElementsByTagName('span');
+           let value = Number(doc.querySelector('span').innerHTML);
+           value = value + 10;
+           doc.querySelector('span').innerHTML = value;
+      }
     </script>
 </html>
